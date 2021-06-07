@@ -36,4 +36,4 @@ def add_to_parser():
 if __name__== '__main__':
     parser = add_to_parser()
     OPTIONS = parser.parse_args()
-    deformable_registration(OPTIONS.threeT,OPTIONS.sevenT,outImage)
+    deformable_registration(OPTIONS.threeT,OPTIONS.sevenT,OPTIONS.outImage)
