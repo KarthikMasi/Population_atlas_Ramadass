@@ -11,8 +11,8 @@ def affine_registration(threet,sevent,fname):
     :param fname: String path 7T to 3T registered image
     return none
     """
-    fixed_image = ants.image_read(3t)
-    moving_image = ants.image_read(7t)
+    fixed_image = ants.image_read(threet)
+    moving_image = ants.image_read(sevent)
     transform = ants.registration(fixed_image,moving_image,\
                'Affine',aff_metric='meansquares')
     affine_img = ants.apply_transforms(fixed_image,moving_image,transform['fwdtransforms'])
