@@ -17,7 +17,7 @@ def deformable_registration(threet,sevent,fname):
     transform = ants.registration(fixed_image,moving_image,\
                                      'SyNOnly',reg_iterations=(60,40,0))
     reg_img = ants.apply_transforms(fixed_image,moving_image,transform['fwdtransforms'])
-    ants.image_write(reg_img,outdir+'/'+fname)
+    ants.image_write(reg_img,fname)
 
 def add_to_parser():
     """

@@ -16,7 +16,7 @@ def affine_registration(threet,sevent,fname):
     transform = ants.registration(fixed_image,moving_image,\
                'Affine',aff_metric='meansquares')
     affine_img = ants.apply_transforms(fixed_image,moving_image,transform['fwdtransforms'])
-    ants.image_write(affine_img,outdir+'/'+fname)
+    ants.image_write(affine_img,fname)
 
 def add_to_parser():
     """
